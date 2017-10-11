@@ -1,0 +1,738 @@
+html
+{
+  height: 100%; /*for footer*/
+}
+body
+{
+  margin: 0 !important;
+  width: 100%;
+  background-color: #f6fae8;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 13px;
+  color: #333;
+  min-height: 100%; /*for footer*/
+  position: relative; /*for footer*/
+  box-sizing: border-box; /*for footer*/
+  padding-bottom: 250px;
+}
+.container
+{
+  width: 1200px;
+  margin: 0 auto;
+}
+.logo
+{
+  background-color: #333;
+  width: 75px;
+  height: 61px;
+  float: left;
+  overflow: hidden;
+}
+.logo h1
+{
+  color: #f0a903;
+}
+.logo h1::first-letter
+{
+  color: #f6fae8;
+}
+.topnav
+{
+  text-align: left;
+  float: left;
+  height: 100px;
+}
+.topnav > ol
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.topnav > ol > li
+{
+  margin: 28px 14px 0 0;
+  float: left;
+}
+.topnav > ol > li:first-child
+{
+  margin: 28px 14px 0 50px;
+}
+.topnav > ol > li > a
+{
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 18px 7px 18px;
+}
+.topnav > ol > li:hover > a
+{
+  border-bottom: 4px solid #333;
+}
+.topnav > ol > li > a:active
+{
+  border-bottom: 4px solid #f0a903;
+}
+.active
+{
+  border-bottom: 4px solid #f0a903;
+}
+.topnav > ol > li > a[href='#']
+{
+  cursor: default;
+}
+
+/* drop down menu */
+.topnav > ol > li > ul
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  max-height: 0;
+  height: 250px;
+  overflow: hidden;
+  position: absolute;
+  transition: max-height 1s ease-out;
+}
+.topnav > ol > li:hover > ul
+{
+  max-height: 250px;
+}
+.topnav > ol > li:nth-child(3) > ul
+{
+  width:217px;
+}
+.topnav > ol > li:nth-child(4) > ul
+{
+  width:221px;
+}
+.topnav > ol > li:nth-child(5) > ul
+{
+  width:79px;
+}
+.topnav > ol > li > ul > li
+{
+  background-color: #333;
+  position: relative;
+  z-index: 100;
+  top: 11px;
+  padding: 3px 0 3px 10px;
+  transition: background-color .15s ease-in-out;
+}
+.topnav > ol > li > ul > li:hover
+{
+  background-color: #c71313;
+}
+.topnav > ol > li > ul > li > a
+{
+  color: #f6fae8;
+  text-decoration: none;
+  font-weight: normal;
+  display: block;
+}
+/*end drop down menu*/
+
+.langnav
+{
+  float: right;
+}
+.langnav > ul
+{
+  list-style-type: none;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+.langnav > ul > li
+{
+  display: inline-block;
+  margin: 28px 0 0 0;
+}
+.langnav > ul > li > a
+{
+  color: #f6fae8;
+  text-decoration: none;
+  font-weight: normal;
+  background-color: #333;
+  padding: 3px 8px;
+  transition: background-color .15s ease-in-out;
+}
+.langnav > ul > li > a:hover
+{
+  background-color: #f0a903;
+}
+main
+{
+  clear: both;
+}
+h1
+{
+  font-size: 56px;
+  font-weight: bold;
+  margin: 0;
+}
+h2
+{
+  font-size: 56px;
+  font-weight: normal;
+  margin: 0;
+}
+h3
+{
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+p
+{
+  text-align: justify;
+}
+/*main page*/
+#intro
+{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#mainpicture
+{
+  position: relative;
+  display: block;
+  top: 20px;
+  left: 600px;
+}
+#mainname
+{
+  position: absolute;
+  top: 180px;
+  left: 180px; /*for non-ccs3 browsers*/
+  font-size: 56px;
+  font-weight: normal;
+  color: #f0a903;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  animation: fadein 2s, moveright 2s;
+  animation-delay: .25s;
+  animation-fill-mode: both;
+  -webkit-animation: fadein 2s, moveright 2s;
+  -webkit-animation-delay: .25s;
+  -webkit-animation-fill-mode: both;
+}
+#mainname::first-line
+{
+  color: #333;
+}
+#mainbutton
+{
+  position: absolute;
+  top: 370px;
+  left: 500px;
+  background-color: #f0a903;
+  padding: 10px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color .3s ease-in-out;
+  animation: fadein 2s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+  -webkit-animation: fadein 2s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode: both;
+}
+#mainbutton:hover
+{
+  background-color: #f3d646;
+}
+
+/*biography*/
+.grid{box-sizing: border-box;}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+[class*="col-"]
+{
+    float: left;
+    padding: 15px;
+}
+.row::after
+{
+    content: "";
+    clear: both;
+    display: table;
+}
+.orange-background
+{
+  background-color: #f0a903;
+  z-index: -100;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 295px;
+}
+.orange-background-bio
+{
+  background-color: #f0a903;
+  z-index: -100;
+  position: absolute;
+  margin-top: 20px;
+  left: 0;
+  width: 100%;
+  height: 295px;
+}
+.white-text
+{
+  color: #f6fae8;
+  margin-top: 20px;
+}
+.white-board
+{
+  width: 300px;
+  height: 300px;S
+}
+.white-board > div
+{
+  background-color: #f6fae8;
+  height: 400px;
+  transform: rotate(30deg);
+  z-index: -99;
+}
+.bio-buttons
+{
+  text-align: center;
+}
+.bio-buttons > button
+{
+  background-color: #f0a903;
+  padding: 10px 40px;
+  font-weight: bold;
+  font-family: inherit;
+  text-transform: uppercase;
+  border: 0;
+  color: #f6fae8;
+  transition: background-color .3s ease-in-out;
+  cursor: pointer;
+  margin: 0 40px;
+}
+.bio-buttons > button:hover
+{
+  background-color: #f3d646;
+}
+
+/*concert proposals and cd main page*/
+.concert
+{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 690px;
+}
+.concert-description
+{
+  width: 550px;
+  height: 410px;
+}
+.concert-list
+{
+  width: 550px;
+  height: 275px;
+  color: #f6fae8;
+}
+.list-background
+{
+  position: absolute;
+  background-color: #f0a903;
+  height: 275px;
+  width: 100%;
+  z-index: -100;
+  bottom: 255px;
+}
+.concert-youtube
+{
+  width: 550px;
+  height: 310px;
+}
+.concert-youtube > iframe
+{
+  border: 0;
+}
+.concert-button
+{
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  margin-top: 20px;
+}
+.concert-button > button
+{
+  background-color: #f0a903;
+  border: none;
+  width: 250px;
+  height: 250px;
+  font-family: inherit;
+  font-size: 56px;
+  color: #333;
+  transition: background-color .3s ease-in-out;
+  cursor: pointer;
+}
+.concert-button > button:hover
+{
+  background-color: #f3d646;
+}
+
+/*cd's*/
+.discography
+{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 900px;
+}
+.discography-description
+{
+  width: 550px;
+}
+.discography-description > p
+{
+  color: #f6fae8;
+}
+.discography-list
+{
+  width: 550px;
+}
+.discography-youtube
+{
+  width: 550px;
+  height: 300px;
+}
+.discography-youtube > iframe
+{
+  border: 0;
+}
+.discography-button
+{
+  width: 400px;
+  text-align: center;
+  margin-top: 20px;
+}
+.discography-button > button
+{
+  background-color: #f0a903;
+  border: none;
+  width: 400px;
+  height: 50px;
+  margin-top: 10px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #f6fae8;
+  transition: background-color .3s ease-in-out;
+  cursor: pointer;
+}
+.discography-button > button:nth-child(2)
+{
+  font-size: 18px;
+  font-weight: bold;
+  color: #c71313;
+}
+.discography-button > button:hover
+{
+  background-color: #f3d646;
+}
+.cd-photo
+{
+  float: left;
+  margin: 5px 40px 5px 0;
+}
+.cd-back
+{
+  float: left;
+  margin: 5px 40px 40px 0;
+}
+.cd-first-paragraph
+{
+  height: 295px;
+}
+
+/*gallery*/
+.mygallery
+{
+  width: 1100px;
+  margin: 0 auto;
+}
+.mygallery > div
+{
+  width: 275px;
+  height: 275px;
+  overflow: hidden;
+  display: block;
+  float: left;
+}
+.mygallery::after
+{
+  content: '';
+  display: block;
+  clear: both;
+}
+.mygallery > div > a > img
+{
+  transform: scale3d(1, 1, 1);
+  transition: transform .2s linear;
+}
+.mygallery > div > a > img:hover
+{
+  transform: scale3d(1.2, 1.2, 1);
+}
+.fancybox-is-open .fancybox-bg
+{
+	opacity: 1!important;
+}
+
+/*contact*/
+.contact
+{
+  text-align: center;
+}
+.contact > p
+{
+  text-align: center;
+}
+.contact > a
+{
+  font-size: 18px;
+  text-decoration: none;
+  color: #f0a903;
+}
+.contact > a:hover
+{
+  color: #f3d646;
+}
+@keyframes fadein
+{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes moveright
+{
+  from {left: 0px;}
+  to {left: 180px;}
+}
+@-webkit-keyframes fadein
+{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@-webkit-keyframes moveright
+{
+  from {left: 0px;}
+  to {left: 180px;}
+}
+
+footer
+{
+  background-color: #1b1b1b;
+  position: absolute;
+  bottom: 0;
+  height: 220px;
+  width: 100%;
+  min-width: 1200px;
+}
+.footer
+{
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+.nav-row
+{
+  list-style-type: none;
+  margin: 20px 100px 0 20px;
+  padding: 0;
+  display: block;
+  float: left;
+}
+.nav-row > li
+{
+  margin-bottom: 10px;
+}
+.nav-row > li > a
+{
+  font-weight: bold;
+  color: #f6fae8;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-row > li > a:hover
+{
+  text-decoration: underline;
+}
+.nav-row > li > a[href='#']
+{
+  text-decoration: none;
+  cursor: default;
+}
+.nav-row > li > ul
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-row > li > ul > li
+{
+  line-height: 18px;
+}
+.nav-row > li > ul > li > a
+{
+  font-weight: normal;
+  color: #f6fae8;
+  text-decoration: none;
+}
+.nav-row > li > ul > li > a:hover
+{
+  text-decoration: underline;
+}
+.socials
+{
+  float: right;
+  margin: 20px 20px 0 0;
+}
+.copyright
+{
+  margin: 0 0 0 20px;
+  padding: 0;
+  line-height: 50px;
+  color: #f6fae8;
+  float: left;
+}
+.author
+{
+  margin: 0 20px 0 0;
+  line-height: 50px;
+  color: #f6fae8;
+  float: right;
+  cursor: default;
+  opacity: .1;
+  transition: opacity .3s ease-in-out;
+}
+.author:hover
+{
+  opacity: 1;
+}
+/* RWD not working - want to add later - too much work
+* uncomment to see effects
+@media only screen and (max-width: 1220px) {
+  .container
+  {
+    width: 900px;
+  }
+  .topnav > ol > li
+  {
+    margin: 28px 2px 0 0;
+  }
+  .topnav > ol > li:first-child
+  {
+    margin: 28px 2px 0 2px;
+  }
+  .topnav > ol > li > a
+  {
+    padding: 0 5px 7px 5px;
+  }
+  .topnav > ol > li:nth-child(3) > ul
+  {
+    width:191px;
+  }
+  .topnav > ol > li:nth-child(4) > ul
+  {
+    width:195px;
+  }
+  .topnav > ol > li:nth-child(5) > ul
+  {
+    width:54px;
+  }
+  .topnav > ol > li > ul > li
+  {
+    padding: 3px 0 3px 6px;
+  }
+  #mainpicture
+  {
+    left: 450px;
+  }
+  #mainname
+  {
+    left: 30px;
+  }
+  #mainbutton
+  {
+    left: 350px;
+  }
+  .concert
+  {
+    height: 950px;
+  }
+  .concert-description
+  {
+    width: 340px;
+    height: 620px;
+  }
+  .concert-list
+  {
+    width: 350px;
+    height: 325px;
+  }
+  .list-background
+  {
+    height: 325px;
+  }
+  .concert-button
+  {
+    margin-top: 170px;
+  }
+  .mygallery
+  {
+    width: 825px;
+  }
+  @keyframes moveright
+  {
+    from {left: -150px;}
+    to {left: 30px;}
+  }
+  footer
+  {
+    min-width: 900px;
+  }
+  .footer
+  {
+    width: 900px;
+  }
+  .nav-row
+  {
+    margin: 20px 20px 0 20px;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .footer
+  {
+    display: none;
+  }
+  footer
+  {
+    opacity: 0;
+  }
+  body
+  {
+    padding-bottom: 50px;
+  }
+}
+*/
